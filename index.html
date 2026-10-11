@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="An invitation to Tina's 24th birthday: date, dress code theme and a murder mystery night.">
+<meta name="theme-color" content="#ffc2da">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<title>You're Invited to Tina's 24th Birthday</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Courgette&family=Pacifico&family=Playfair+Display:ital,wght@1,700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<canvas id="cf" aria-hidden="true"></canvas>
+<div id="pre" aria-hidden="true"><div class="pn">0</div><div class="pb"><i></i></div><p>Tina's 24th Birthday</p></div>
+<button id="snd" class="snd" type="button" aria-pressed="false">Sound Off</button>
+<div id="prog" aria-hidden="true"></div>
+<nav class="dock" id="dock" aria-label="Page sections"><a href="#hero">Home</a><a href="#count">Countdown</a><a href="#info">Details</a><a href="#dress">Theme</a><a href="#mystery">Mystery</a></nav>
+
+<header id="hero">
+  <canvas id="phys" aria-hidden="true"></canvas>
+  <p class="greet" id="greet" hidden></p>
+  <svg class="bunt" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 8Q600 100 1220 8" fill="none" stroke="#e3cfd9" stroke-width="3"/></svg>
+  <svg class="rib" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="rg" x1="0" x2="1"><stop offset="0" stop-color="#ffb3cf"/><stop offset=".5" stop-color="#cdbcff"/><stop offset="1" stop-color="#a8e3cb"/></linearGradient></defs><path d="M-40 470C180 300 360 600 620 430S1020 280 1260 440" fill="none" stroke="url(#rg)" stroke-width="26" stroke-linecap="round"/></svg>
+  <div class="eyebrow"><span class="e1">You're Invited to</span><span class="e2">Tina's Birthday</span></div>
+  <button id="n24" aria-label="Tina's 24th birthday. Press for confetti"><span class="d d1">2</span><span class="d d2">4</span><i class="st s1">✦</i><i class="st s2">✦</i><i class="st s3">✦</i><i class="st s4">✦</i></button>
+  <p class="hint">Tap the number</p>
+  <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30Q150 0 300 30T600 30T900 30T1200 30V60H0Z" fill="#fff"/></svg>
+</header>
+
+<section id="count"><div class="wrap">
+  <h2>Countdown to the Party</h2>
+  <div id="cd" class="cd" role="timer" aria-live="off">
+    <div><b>0</b><small>Days</small></div><div><b>0</b><small>Hours</small></div><div><b>0</b><small>Minutes</small></div><div><b>0</b><small>Seconds</small></div>
+  </div>
+</div></section>
+
+<section id="info"><div class="wrap">
+  <h2>When and Where?</h2>
+  <div class="ticket"><div class="tkin">
+    <div class="tk-top"><span>Admit One</span><span>Tina's 24th Birthday</span></div>
+    <div class="tk-body">
+      <div class="tk-main">
+        <div class="tk-grid">
+          <div><small>Date</small><b id="dDate"></b></div>
+          <div><small>Arrival Time</small><b id="dTime"></b></div>
+          <div class="wide"><small>Dress Code</small><b>Any Theme, Except Birthday</b></div>
+        </div>
+      </div>
+      <div class="tk-stub">
+        <div class="bar" aria-hidden="true"></div>
+        <div class="no"><small>Ticket No.</small><b>000024</b></div>
+      </div>
+    </div>
+  </div></div>
+</div></section>
+
+<section id="dress"><div class="wrap">
+  <h2 class="th">Party Theme</h2>
+  <p class="ts">Wrong Outfit</p>
+  <p>Wear something that does not fit the party at all. The more wrong, the better!</p>
+  
+  <div class="idea" id="idea" aria-live="polite"><small>Outfit Idea</small><b id="it"></b><span id="idd"></span><div class="mix">
+    <div class="slot" id="s1">👑</div><div class="slot" id="s2">🩱</div><div class="slot" id="s3">🥾</div>
+  </div></div>
+  <button class="btn" id="mixBtn" type="button">Next outfit idea</button>
+</div></section>
+
+<section id="mystery">
+  <div class="tape t1" aria-hidden="true"><span>Crime Scene • Do Not Cross • Crime Scene • Do Not Cross • Crime Scene • Do Not Cross • Crime Scene • Do Not Cross</span></div>
+  <div class="wrap">
+    <p class="case"><i></i>Case Open</p>
+    <h2>A Murder Mystery Awaits</h2>
+    <p class="cname"><small>Case Name</small><span>The Other Face</span></p>
+    <p class="lead">Someone at this party is not who they seem. One of the guests is the killer, and you will find out who by investigating together.</p>
+    <div class="file">
+      <div class="stamp">Top Secret</div>
+      <dl>
+        <div><dt>Case</dt><dd>No. 1</dd></div>
+        <div><dt>Players</dt><dd>All the Guests</dd></div>
+        <div><dt>Killer</dt><dd>1, Secret</dd></div>
+        <div><dt>Detective</dt><dd>Tina Momeni</dd></div>
+      </dl>
+    </div>
+    <div class="sus" aria-hidden="true"><span class="mg">🔍</span><b></b><b></b><b></b><b></b><b></b></div>
+    <ol class="steps">
+      <li><b>Get Your Character</b><span>Every guest receives a secret character with a short profile and a password.</span></li>
+      <li><b>Watch the Scene</b><span>At the party, Tina shows a short video and tells the story of the murder: who, when and where.</span></li>
+      <li><b>Read Your Interrogation</b><span>Log in with your name and password to read the interrogation dialogues of your character.</span></li>
+      <li><b>Find the Killer</b><span>Compare your stories, spot the lies and name the killer together.</span></li>
+    </ol>
+    <p class="fine">Your secret character arrives before the party. Keep it to yourself!</p>
+  </div>
+  <div class="tape t2" aria-hidden="true"><span>Crime Scene • Do Not Cross • Crime Scene • Do Not Cross • Crime Scene • Do Not Cross • Crime Scene • Do Not Cross</span></div>
+</section>
+
+<footer>With love, Tina.</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
