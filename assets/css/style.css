@@ -26,12 +26,7 @@ h2{font-size:clamp(1.9rem,6.5vw,2.8rem);color:var(--rose);margin-bottom:1.2rem}
 .cd div:nth-child(1){background:#ffeaf2}.cd div:nth-child(2){background:#f1ebff}.cd div:nth-child(3){background:#e5f7ef}.cd div:nth-child(4){background:#e6f2ff}
 .cd b{display:block;font-family:'Fredoka',sans-serif;font-size:2.3rem;font-weight:600;line-height:1.2;color:var(--rose)}
 .cd small{font-size:.85rem;color:var(--soft)}
-@media (max-width:600px){
-  .cd{gap:4px}
-  .cd div{width:auto;flex:1;min-width:0;padding:.7rem 0 .5rem}
-  .cd b{font-size:1.5rem}
-  .cd small{font-size:.7rem}
-}
+
 .now{font-family:'Fredoka',sans-serif;font-size:2rem;color:var(--rose);margin:0}
 #info{background:linear-gradient(180deg,#e9f8f2,#eaf3ff)}
 .btn{display:inline-block;cursor:pointer;font:inherit;font-weight:700;color:var(--btnink);background:var(--btn);border:1.5px solid var(--line);border-radius:999px;padding:.5rem 1.3rem;margin:.2rem;text-decoration:none;box-shadow:0 10px 18px -12px var(--glow);transition:transform .15s,box-shadow .15s}
@@ -163,3 +158,33 @@ a,button,.btn,#n24,.snd,.dock a{cursor:url("data:image/svg+xml,<svg xmlns='http:
 @keyframes cf{50%{transform:translateY(-12px) rotate(18deg);opacity:.65}}
 footer{text-align:center;padding:2rem 1rem 6rem;background:var(--blush);color:var(--soft);font-family:'Fredoka',sans-serif;font-weight:500;font-size:1.2rem}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media (max-width:600px){
+  .cd{gap:4px}
+  .cd div{width:auto;flex:1;min-width:0;padding:.7rem 0 .5rem}
+  .cd b{font-size:1.5rem}
+  .cd small{font-size:.7rem}
+}
+/* Fix countdown layout on mobile */
+@media (max-width: 600px) {
+  .cd {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    flex-wrap: nowrap !important;
+    gap: 4px !important;
+    width: 100% !important;
+  }
+
+  .cd > div {
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 10px 0 !important;
+  }
+
+  .cd > div b {
+    font-size: 1.4rem !important;
+  }
+
+  .cd > div small {
+    font-size: 0.65rem !important;
+  }
+}
